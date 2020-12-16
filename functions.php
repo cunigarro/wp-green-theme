@@ -25,7 +25,7 @@
             $classes = empty( $item->classes ) ? array() : (array) $item->classes;
 
             $classes[] = ($args->walker->has_children) ? 'dropdown' : '';
-            $classes[] = ($item->current || $item->current_item_ancestor) ? 'active' : '';
+            $classes[] = ($item->current || $item->current_item_ancestor) ? 'text-blue' : '';
             $classes[] = 'menu-item-' . $item->ID;
             if( $depth && $args->walker->has_children ){
                 $classes[] = 'dropdown-submenu';
@@ -43,8 +43,7 @@
             $attributes .= ! empty( $item->target ) ? ' target="' . esc_attr($item->target) . '"' : '';
             $attributes .= ! empty( $item->xfn ) ? ' rel="' . esc_attr($item->xfn) . '"' : '';
             $attributes .= ! empty( $item->url ) ? ' href="' . esc_attr($item->url) . '"' : '';
-
-            $attributes .= ( $args->walker->has_children ) ? ' class="dropdown-toggle" data-toggle="dropdown"' : '';
+            $attributes .= ( $item->current || $item->current_item_ancestor ) ? ' class="hover:text-blue text-blue"' : 'class="hover:text-blue text-gray-600"';
 
             $item_output = $args->before;
             $item_output .= '<a' . $attributes . '>';
