@@ -114,7 +114,10 @@
             <div class="mt-6">
               <?php
                 wp_nav_menu(array(
-                  'menu_class' => 'grid gap-y-8 text-left'
+                  'menu'              => 'main-menu',
+                  'container'         => false,
+                  'menu_class'        => 'grid gap-y-8 text-left',
+                  'walker'            => new Walker_Nav_Main_Menu()
                 ));
               ?>
 
