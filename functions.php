@@ -6,6 +6,7 @@
     add_action( 'wp_enqueue_scripts', 'university_files' );
 
     add_theme_support('post-thumbnails');
+    add_theme_support('menus');
 
     class Walker_Nav_Main_Menu extends Walker_Nav_Menu
     {
