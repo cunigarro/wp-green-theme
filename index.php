@@ -231,9 +231,10 @@
       Noticias
     </h2>
   </div>
-  <div class="swiper-container swiper-container-2 overflow-hidden relative z-0 px-4">
+
+  <!-- <div class="swiper-container swiper-container-2 overflow-hidden relative z-0 px-4">
     <div class="swiper-wrapper pb-10">
-      <!-- <?php
+      <?php
         while(have_posts()) {
             the_post(); ?>
             <div class="swiper-slide pb-20">
@@ -252,116 +253,42 @@
               </div>
             </div>
         <?php }
-      ?> -->
-
-      <?php
-        $pagitationPosts = new WP_Query(array(
-          'posts_per_page' => 3
-        ));
-
-        while($pagitationPosts->have_posts()) {
-            $pagitationPosts->the_post(); ?>
-            <div class="swiper-slide pb-20">
-              <div class="text-left">
-                <?php $url = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID())); ?>
-                <img class="mb-3" src="<?php echo $url ?>">
-                <h3 class="font-bold">
-                  <?php the_title(); ?>
-                </h3>
-                <?php the_excerpt(); ?>
-                <div class="text-right">
-                  <a class="text-sm text-blue hover:underline font-semibold" href="<?php the_permalink(); ?>">
-                    Ir a artículo
-                  </a>
-                </div>
-              </div>
-            </div>
-        <?php }
       ?>
-
-      <!-- <div class="swiper-slide">
-        <div class="text-left">
-          <img class="mb-3" src="https://picsum.photos/id/132/500/300" alt="">
-          <h3 class="font-bold">
-            Lorem ipsum dolor sit amet consectetur
-          </h3>
-          <p class="text-sm">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non placeat mollitia at similique quod nostrum magni impedit itaque sapiente voluptates quidem qui cum nulla, exercitationem ullam aliquid eveniet quo nemo!
-          </p>
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <div class="text-left">
-          <img class="mb-3" src="https://picsum.photos/id/1019/500/300" alt="">
-          <h3 class="font-bold">
-            Lorem ipsum dolor sit amet consectetur
-          </h3>
-          <p class="text-sm">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non placeat mollitia at similique quod nostrum magni impedit itaque sapiente voluptates quidem qui cum nulla, exercitationem ullam aliquid eveniet quo nemo!
-          </p>
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <div class="text-left">
-          <img class="mb-3" src="https://picsum.photos/id/140/500/300" alt="">
-          <h3 class="font-bold">
-            Lorem ipsum dolor sit amet consectetur
-          </h3>
-          <p class="text-sm">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non placeat mollitia at similique quod nostrum magni impedit itaque sapiente voluptates quidem qui cum nulla, exercitationem ullam aliquid eveniet quo nemo!
-          </p>
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <div class="text-left">
-          <img class="mb-3" src="https://picsum.photos/id/106/500/300" alt="">
-          <h3 class="font-bold">
-            Lorem ipsum dolor sit amet consectetur
-          </h3>
-          <p class="text-sm">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non placeat mollitia at similique quod nostrum magni impedit itaque sapiente voluptates quidem qui cum nulla, exercitationem ullam aliquid eveniet quo nemo!
-          </p>
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <div class="text-left">
-          <img class="mb-3" src="https://picsum.photos/id/127/500/300" alt="">
-          <h3 class="font-bold">
-            Lorem ipsum dolor sit amet consectetur
-          </h3>
-          <p class="text-sm">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non placeat mollitia at similique quod nostrum magni impedit itaque sapiente voluptates quidem qui cum nulla, exercitationem ullam aliquid eveniet quo nemo!
-          </p>
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <div class="text-left">
-          <img class="mb-3" src="https://picsum.photos/id/1067/500/300" alt="">
-          <h3 class="font-bold">
-            Lorem ipsum dolor sit amet consectetur
-          </h3>
-          <p class="text-sm">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non placeat mollitia at similique quod nostrum magni impedit itaque sapiente voluptates quidem qui cum nulla, exercitationem ullam aliquid eveniet quo nemo!
-          </p>
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <div class="text-left">
-          <img class="mb-3" src="https://picsum.photos/id/13/500/300" alt="">
-          <h3 class="font-bold">
-            Lorem ipsum dolor sit amet consectetur
-          </h3>
-          <p class="text-sm">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non placeat mollitia at similique quod nostrum magni impedit itaque sapiente voluptates quidem qui cum nulla, exercitationem ullam aliquid eveniet quo nemo!
-          </p>
-        </div>
-      </div> -->
     </div>
-    <!-- If we need navigation buttons -->
+
     <div class="swiper-button-prev"></div>
     <div class="swiper-button-next"></div>
-    <!-- Add Pagination -->
+
     <div class="swiper-pagination"></div>
+  </div> -->
+
+  <div class="container flex mx-auto">
+    <?php
+      $currentPage = get_query_var('paged');
+      $pagitationPosts = new WP_Query(array(
+        'posts_per_page' => 3,
+        'paged' => $currentPage
+      ));
+
+      while($pagitationPosts->have_posts()) {
+          $pagitationPosts->the_post(); ?>
+          <div class="flex-1 px-4">
+            <div class="text-left">
+              <?php $url = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID())); ?>
+              <img class="mb-3" src="<?php echo $url ?>">
+              <h3 class="font-bold">
+                <?php the_title(); ?>
+              </h3>
+              <?php the_excerpt(); ?>
+              <div class="text-right">
+                <a class="text-sm text-blue hover:underline font-semibold" href="<?php the_permalink(); ?>">
+                  Ir a artículo
+                </a>
+              </div>
+            </div>
+          </div>
+      <?php }
+    ?>
   </div>
 
 <?php get_footer(); ?>
