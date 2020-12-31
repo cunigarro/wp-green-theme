@@ -262,33 +262,45 @@
     <div class="swiper-pagination"></div>
   </div> -->
 
-  <div class="container flex mx-auto">
-    <?php
-      $currentPage = get_query_var('paged');
-      $pagitationPosts = new WP_Query(array(
-        'posts_per_page' => 3,
-        'paged' => $currentPage
-      ));
+  <div class="container mx-auto px-4">
+    <div class="-mx-4 flex">
+      <?php
+        $currentPage = get_query_var('paged');
+        $pagitationPosts = new WP_Query(array(
+          'posts_per_page' => 3,
+          'paged' => $currentPage
+        ));
 
-      while($pagitationPosts->have_posts()) {
-          $pagitationPosts->the_post(); ?>
-          <div class="flex-1 px-4">
-            <div class="text-left">
-              <?php $url = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID())); ?>
-              <img class="mb-3" src="<?php echo $url ?>">
-              <h3 class="font-bold">
-                <?php the_title(); ?>
-              </h3>
-              <?php the_excerpt(); ?>
-              <div class="text-right">
-                <a class="text-sm text-blue hover:underline font-semibold" href="<?php the_permalink(); ?>">
-                  Ir a artículo
-                </a>
+        while($pagitationPosts->have_posts()) {
+            $pagitationPosts->the_post(); ?>
+            <div class="flex-1 px-4">
+              <div class="text-left">
+                <?php $url = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID())); ?>
+                <img class="mb-3" src="<?php echo $url ?>">
+                <h3 class="font-bold">
+                  <?php the_title(); ?>
+                </h3>
+                <?php the_excerpt(); ?>
+                <div class="text-right">
+                  <a class="text-sm text-blue hover:underline font-semibold" href="<?php the_permalink(); ?>">
+                    Ir a artículo
+                  </a>
+                </div>
               </div>
             </div>
-          </div>
-      <?php }
-    ?>
+        <?php }
+      ?>
+    </div>
+
+    <div class="flex py-5">
+      <div class="w-1/2 text-left">
+        <?php previous_posts_link('Anterior', $pagitationPosts->max_num_pages); ?>
+      </div>
+
+      <div class="w-1/2 text-right">
+        <?php next_posts_link('Siguiente', $pagitationPosts->max_num_pages); ?>
+      </div>
+    </div>
   </div>
 
 <?php get_footer(); ?>
