@@ -233,9 +233,34 @@
   </div>
   <div class="swiper-container swiper-container-2 overflow-hidden relative z-0 px-4">
     <div class="swiper-wrapper pb-10">
-      <?php
+      <!-- <?php
         while(have_posts()) {
             the_post(); ?>
+            <div class="swiper-slide pb-20">
+              <div class="text-left">
+                <?php $url = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID())); ?>
+                <img class="mb-3" src="<?php echo $url ?>">
+                <h3 class="font-bold">
+                  <?php the_title(); ?>
+                </h3>
+                <?php the_excerpt(); ?>
+                <div class="text-right">
+                  <a class="text-sm text-blue hover:underline font-semibold" href="<?php the_permalink(); ?>">
+                    Ir a artículo
+                  </a>
+                </div>
+              </div>
+            </div>
+        <?php }
+      ?> -->
+
+      <?php
+        $pagitationPosts = new WP_Query(array(
+          'posts_per_page' => 3
+        ));
+
+        while($pagitationPosts->have_posts()) {
+            $pagitationPosts->the_post(); ?>
             <div class="swiper-slide pb-20">
               <div class="text-left">
                 <?php $url = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID())); ?>
