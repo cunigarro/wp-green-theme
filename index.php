@@ -263,7 +263,7 @@
   </div> -->
 
   <div class="container mx-auto px-4">
-    <div class="-mx-4 flex">
+    <div class="-m-4 flex flex-wrap sm:flex-nowrap">
       <?php
         $currentPage = get_query_var('paged');
         $pagitationPosts = new WP_Query(array(
@@ -273,8 +273,8 @@
 
         while($pagitationPosts->have_posts()) {
             $pagitationPosts->the_post(); ?>
-            <div class="flex-1 px-4">
-              <div class="text-left">
+            <div class="flex-none sm:flex-1 w-full p-4">
+              <div class="text-left border">
                 <?php $url = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID())); ?>
                 <img class="mb-3" src="<?php echo $url ?>">
                 <h3 class="font-bold">
@@ -292,14 +292,19 @@
       ?>
     </div>
 
-    <div class="flex py-5">
-      <div class="w-1/2 text-left">
+    <div class="flex py-5 border justify-center">
+      <?php
+        echo paginate_links(array(
+          'total' => $pagitationPosts->max_num_pages
+        ));
+      ?>
+      <!-- <div class="w-1/2 text-right">
         <?php previous_posts_link('Anterior', $pagitationPosts->max_num_pages); ?>
       </div>
 
-      <div class="w-1/2 text-right">
+      <div class="w-1/2 text-left">
         <?php next_posts_link('Siguiente', $pagitationPosts->max_num_pages); ?>
-      </div>
+      </div> -->
     </div>
   </div>
 
