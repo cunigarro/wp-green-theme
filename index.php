@@ -274,7 +274,7 @@
         while($pagitationPosts->have_posts()) {
             $pagitationPosts->the_post(); ?>
             <div class="flex-none sm:flex-1 w-full p-4">
-              <div class="text-left border">
+              <div class="text-left">
                 <?php $url = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID())); ?>
                 <img class="mb-3" src="<?php echo $url ?>">
                 <h3 class="font-bold">
@@ -292,10 +292,12 @@
       ?>
     </div>
 
-    <div class="flex py-5 border justify-center">
+    <div class="flex py-5 justify-center">
       <?php
         echo paginate_links(array(
-          'total' => $pagitationPosts->max_num_pages
+          'total' => $pagitationPosts->max_num_pages,
+          'prev_text' => __('<i class="mdi mdi-chevron-left mdi-36px text-green"></i>'),
+          'next_text' => __('<i class="mdi mdi-chevron-right mdi-36px text-green"></i>')
         ));
       ?>
       <!-- <div class="w-1/2 text-right">
