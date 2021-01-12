@@ -5,12 +5,7 @@
         wp_enqueue_style( 'university_main_styles', get_stylesheet_uri() );
     }
 
-    function custom_settings() {
-        register_setting('settings-group', 'first_name');
-    }
-
     add_action('wp_enqueue_scripts', 'university_files');
-    add_action('admin_init', 'custom_settings');
 
     add_theme_support('post-thumbnails');
     add_theme_support('menus');

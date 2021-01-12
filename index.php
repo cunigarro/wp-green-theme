@@ -136,108 +136,25 @@
     </div>
   </div>
 
-  <!-- <div class="container mx-auto pt-8 px-4 -mb-6">
-    <h2 class="font-bold text-4xl">
+  <div class="container mx-auto pt-8 px-4">
+    <h2 class="font-bold text-4xl mb-4">
       Te puede interesar
     </h2>
   </div>
-  <div class="swiper-container swiper-container-3 overflow-hidden relative z-0 px-4">
-    <div class="swiper-wrapper pb-10">
-      <div class="swiper-slide">
-        <div class="text-left">
-          <img class="mb-3" src="https://picsum.photos/id/1/500/300" alt="">
-          <h3 class="font-bold">
-            Lorem ipsum dolor sit amet consectetur
-          </h3>
-          <p class="text-sm">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non placeat mollitia at similique quod nostrum magni impedit itaque sapiente voluptates quidem qui cum nulla, exercitationem ullam aliquid eveniet quo nemo!
-          </p>
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <div class="text-left">
-          <img class="mb-3" src="https://picsum.photos/id/1029/500/300" alt="">
-          <h3 class="font-bold">
-            Lorem ipsum dolor sit amet consectetur
-          </h3>
-          <p class="text-sm">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non placeat mollitia at similique quod nostrum magni impedit itaque sapiente voluptates quidem qui cum nulla, exercitationem ullam aliquid eveniet quo nemo!
-          </p>
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <div class="text-left">
-          <img class="mb-3" src="https://picsum.photos/id/101/500/300" alt="">
-          <h3 class="font-bold">
-            Lorem ipsum dolor sit amet consectetur
-          </h3>
-          <p class="text-sm">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non placeat mollitia at similique quod nostrum magni impedit itaque sapiente voluptates quidem qui cum nulla, exercitationem ullam aliquid eveniet quo nemo!
-          </p>
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <div class="text-left">
-          <img class="mb-3" src="https://picsum.photos/id/106/500/300" alt="">
-          <h3 class="font-bold">
-            Lorem ipsum dolor sit amet consectetur
-          </h3>
-          <p class="text-sm">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non placeat mollitia at similique quod nostrum magni impedit itaque sapiente voluptates quidem qui cum nulla, exercitationem ullam aliquid eveniet quo nemo!
-          </p>
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <div class="text-left">
-          <img class="mb-3" src="https://picsum.photos/id/1067/500/300" alt="">
-          <h3 class="font-bold">
-            Lorem ipsum dolor sit amet consectetur
-          </h3>
-          <p class="text-sm">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non placeat mollitia at similique quod nostrum magni impedit itaque sapiente voluptates quidem qui cum nulla, exercitationem ullam aliquid eveniet quo nemo!
-          </p>
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <div class="text-left">
-          <img class="mb-3" src="https://picsum.photos/id/127/500/300" alt="">
-          <h3 class="font-bold">
-            Lorem ipsum dolor sit amet consectetur
-          </h3>
-          <p class="text-sm">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non placeat mollitia at similique quod nostrum magni impedit itaque sapiente voluptates quidem qui cum nulla, exercitationem ullam aliquid eveniet quo nemo!
-          </p>
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <div class="text-left">
-          <img class="mb-3" src="https://picsum.photos/id/132/500/300" alt="">
-          <h3 class="font-bold">
-            Lorem ipsum dolor sit amet consectetur
-          </h3>
-          <p class="text-sm">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non placeat mollitia at similique quod nostrum magni impedit itaque sapiente voluptates quidem qui cum nulla, exercitationem ullam aliquid eveniet quo nemo!
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
-    <div class="swiper-pagination"></div>
-  </div> -->
 
-  <div class="container mx-auto pt-8 px-4">
-    <h2 class="font-bold text-4xl mb-4">
-      Noticias
-    </h2>
-  </div>
-
-  <!-- <div class="swiper-container swiper-container-2 overflow-hidden relative z-0 px-4">
-    <div class="swiper-wrapper pb-10">
+  <div class="container mx-auto px-4">
+    <div class="-m-4 flex flex-wrap sm:flex-nowrap justify-center">
       <?php
-        while(have_posts()) {
-            the_post(); ?>
-            <div class="swiper-slide pb-20">
+        $currentPage = get_query_var('paged');
+        $pagitationPosts = new WP_Query(array(
+          'posts_per_page' => 3,
+          'paged' => $currentPage,
+          'category_name' => 'te-puede-interesar'
+        ));
+
+        while($pagitationPosts->have_posts()) {
+            $pagitationPosts->the_post(); ?>
+            <div class="w-full p-4 sm:w-4/12">
               <div class="text-left">
                 <?php $url = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID())); ?>
                 <img class="mb-3" src="<?php echo $url ?>">
@@ -256,24 +173,43 @@
       ?>
     </div>
 
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
+    <div class="flex py-5 justify-center">
+      <?php
+        echo paginate_links(array(
+          'total' => $pagitationPosts->max_num_pages,
+          'prev_text' => __('<i class="mdi mdi-chevron-left mdi-36px text-green"></i>'),
+          'next_text' => __('<i class="mdi mdi-chevron-right mdi-36px text-green"></i>')
+        ));
+      ?>
+      <!-- <div class="w-1/2 text-right">
+        <?php previous_posts_link('Anterior', $pagitationPosts->max_num_pages); ?>
+      </div>
 
-    <div class="swiper-pagination"></div>
-  </div> -->
+      <div class="w-1/2 text-left">
+        <?php next_posts_link('Siguiente', $pagitationPosts->max_num_pages); ?>
+      </div> -->
+    </div>
+  </div>
+
+  <div class="container mx-auto pt-8 px-4">
+    <h2 class="font-bold text-4xl mb-4">
+      Noticias
+    </h2>
+  </div>
 
   <div class="container mx-auto px-4">
-    <div class="-m-4 flex flex-wrap sm:flex-nowrap">
+    <div class="-m-4 flex flex-wrap sm:flex-nowrap justify-center">
       <?php
         $currentPage = get_query_var('paged');
         $pagitationPosts = new WP_Query(array(
           'posts_per_page' => 3,
-          'paged' => $currentPage
+          'paged' => $currentPage,
+          'category_name' => 'noticias'
         ));
 
         while($pagitationPosts->have_posts()) {
             $pagitationPosts->the_post(); ?>
-            <div class="flex-none sm:flex-1 w-full p-4">
+            <div class="w-full p-4 sm:w-4/12">
               <div class="text-left">
                 <?php $url = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID())); ?>
                 <img class="mb-3" src="<?php echo $url ?>">
