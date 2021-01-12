@@ -143,26 +143,34 @@
   </div>
 
   <div class="container mx-auto px-4">
-    <div class="-m-4 flex flex-wrap sm:flex-nowrap justify-center">
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-5">
       <?php
-        $currentPage = get_query_var('paged');
-        $pagitationPosts = new WP_Query(array(
+        $currentInterestingPage = get_query_var('paged');
+        $pagitationInterestingPosts = new WP_Query(array(
           'posts_per_page' => 3,
-          'paged' => $currentPage,
+          'paged' => $currentInterestingPage,
           'category_name' => 'te-puede-interesar'
         ));
 
-        while($pagitationPosts->have_posts()) {
-            $pagitationPosts->the_post(); ?>
-            <div class="w-full p-4 sm:w-4/12">
-              <div class="text-left">
-                <?php $url = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID())); ?>
-                <img class="mb-3" src="<?php echo $url ?>">
-                <h3 class="font-bold">
+        while($pagitationInterestingPosts->have_posts()) {
+            $pagitationInterestingPosts->the_post(); ?>
+            <div class="text-left flex flex-col">
+              <?php $url = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID())); ?>
+              <?php if (!empty($url)): ?>
+                <img class="mb-3 object-cover h-64 sm:h-32 lg:h-64 w-100" src="<?php echo $url ?>">
+              <?php else: ?>
+                <div class="mb-3 h-64 sm:h-32 lg:h-64 bg-gray-200">
+                  <!-- -->
+                </div>
+              <?php endif; ?>
+              <div class="flex flex-col flex-1">
+                <h3 class="font-bold flex-none sm:flex-1 lg:flex-none">
                   <?php the_title(); ?>
                 </h3>
-                <?php the_excerpt(); ?>
-                <div class="text-right">
+                <div class="block sm:hidden lg:block flex-1 mt-3">
+                  <?php the_excerpt(); ?>
+                </div>
+                <div class="text-right mt-4">
                   <a class="text-sm text-blue hover:underline font-semibold" href="<?php the_permalink(); ?>">
                     Ir a artículo
                   </a>
@@ -176,18 +184,11 @@
     <div class="flex py-5 justify-center">
       <?php
         echo paginate_links(array(
-          'total' => $pagitationPosts->max_num_pages,
+          'total' => $pagitationInterestingPosts->max_num_pages,
           'prev_text' => __('<i class="mdi mdi-chevron-left mdi-36px text-green"></i>'),
           'next_text' => __('<i class="mdi mdi-chevron-right mdi-36px text-green"></i>')
         ));
       ?>
-      <!-- <div class="w-1/2 text-right">
-        <?php previous_posts_link('Anterior', $pagitationPosts->max_num_pages); ?>
-      </div>
-
-      <div class="w-1/2 text-left">
-        <?php next_posts_link('Siguiente', $pagitationPosts->max_num_pages); ?>
-      </div> -->
     </div>
   </div>
 
@@ -198,26 +199,34 @@
   </div>
 
   <div class="container mx-auto px-4">
-    <div class="-m-4 flex flex-wrap sm:flex-nowrap justify-center">
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-5">
       <?php
-        $currentPage = get_query_var('paged');
-        $pagitationPosts = new WP_Query(array(
+        $currentNewsPage = get_query_var('paged');
+        $pagitationNewsPosts = new WP_Query(array(
           'posts_per_page' => 3,
-          'paged' => $currentPage,
+          'paged' => $currentNewsPage,
           'category_name' => 'noticias'
         ));
 
-        while($pagitationPosts->have_posts()) {
-            $pagitationPosts->the_post(); ?>
-            <div class="w-full p-4 sm:w-4/12">
-              <div class="text-left">
-                <?php $url = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID())); ?>
-                <img class="mb-3" src="<?php echo $url ?>">
-                <h3 class="font-bold">
+        while($pagitationNewsPosts->have_posts()) {
+            $pagitationNewsPosts->the_post(); ?>
+            <div class="text-left flex flex-col">
+              <?php $url = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID())); ?>
+              <?php if (!empty($url)): ?>
+                <img class="mb-3 object-cover h-64 sm:h-32 lg:h-64 w-100" src="<?php echo $url ?>">
+              <?php else: ?>
+                <div class="mb-3 h-64 sm:h-32 lg:h-64 bg-gray-200">
+                  <!-- -->
+                </div>
+              <?php endif; ?>
+              <div class="flex flex-col flex-1">
+                <h3 class="font-bold flex-none sm:flex-1 lg:flex-none">
                   <?php the_title(); ?>
                 </h3>
-                <?php the_excerpt(); ?>
-                <div class="text-right">
+                <div class="block sm:hidden lg:block flex-1 mt-3">
+                  <?php the_excerpt(); ?>
+                </div>
+                <div class="text-right mt-4">
                   <a class="text-sm text-blue hover:underline font-semibold" href="<?php the_permalink(); ?>">
                     Ir a artículo
                   </a>
@@ -231,18 +240,11 @@
     <div class="flex py-5 justify-center">
       <?php
         echo paginate_links(array(
-          'total' => $pagitationPosts->max_num_pages,
+          'total' => $pagitationNewsPosts->max_num_pages,
           'prev_text' => __('<i class="mdi mdi-chevron-left mdi-36px text-green"></i>'),
           'next_text' => __('<i class="mdi mdi-chevron-right mdi-36px text-green"></i>')
         ));
       ?>
-      <!-- <div class="w-1/2 text-right">
-        <?php previous_posts_link('Anterior', $pagitationPosts->max_num_pages); ?>
-      </div>
-
-      <div class="w-1/2 text-left">
-        <?php next_posts_link('Siguiente', $pagitationPosts->max_num_pages); ?>
-      </div> -->
     </div>
   </div>
 
