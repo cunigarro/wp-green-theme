@@ -1,5 +1,5 @@
 <h1>
-    <?php bloginfo('name'); ?>
+    CLAC Web Configurations
 </h1>
 <?php settings_errors(); ?>
 <form method="post" action="options.php">
