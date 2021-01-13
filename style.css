@@ -129621,3 +129621,16 @@ video {
 .page-numbers.prev {
   margin-right: 3px;
 }
+
+.wpcf7-form input,
+.wpcf7-form textarea {
+  border: thin solid gray;
+  padding: 10px;
+}
+
+.wpcf7-form .wpcf7-submit {
+  border: none;
+  padding: .8rem 1.2rem;
+  background-color: #39dd7d;
+  color: #fff;
+}
