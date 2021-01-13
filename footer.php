@@ -2,7 +2,7 @@
       <div class="container mx-auto text-sm text-white flex items-center px-4">
         <span class="flex-1">
           <a class="font-semibold text-base mr-4 hover:underline" href="#">Suscribete</a>
-          <a class="font-semibold text-base hover:underline" href="mailto:linda.v@clac-comerciojusto.org">Contáctanos</a>
+          <a class="font-semibold text-base hover:underline" href="/contactanos">Contáctanos</a>
         </span>
         <div class="flex">
           <?php if (esc_attr(get_option('facebook'))): ?>
