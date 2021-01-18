@@ -1,5 +1,6 @@
 <?php
     require get_template_directory() . '/inc/function-admin.php';
+    require get_template_directory() . '/inc/custom-post-type.php';
 
     function university_files() {
         wp_enqueue_style( 'university_main_styles', get_stylesheet_uri() );

@@ -1,8 +1,14 @@
 <?php
     function add_admin_page() {
-        add_menu_page('Menu Page', 'CLAC Settings', 'manage_options', 'clac', 'theme_create_page');
-        add_submenu_page('clac', 'Menu Page', 'CLAC Settings', 'manage_options', 'clac', 'theme_create_page');
+        add_menu_page('CLAC Settings', 'CLAC Settings', 'manage_options', 'clac', 'theme_create_page');
 
+        // CLAC Settings
+        add_submenu_page('clac', 'CLAC Settings', 'CLAC Settings', 'manage_options', 'clac', 'theme_create_page');
+
+        // Contact form options
+        add_submenu_page('clac', 'Contact Form', 'Contact Form', 'manage_options', 'clac_contact_section', 'create_contact_form_page');
+
+        // Activate custom settings
         add_action('admin_init', 'custom_settings');
     }
 
@@ -20,6 +26,13 @@
         add_settings_field('instagram-url', 'Instagram', 'instagram_url', 'clac', 'sidebar-options');
         add_settings_field('youtube-url', 'Youtube', 'youtube_url', 'clac', 'sidebar-options');
         add_settings_field('twitter-url', 'Twitter', 'twitter_url', 'clac', 'sidebar-options');
+
+        // Contact form options
+        register_setting('contact-options', 'activate_contact');
+
+        add_settings_section('contact-section', 'Contact Form', 'contact_options', 'clac_contact_section');
+
+        add_settings_field('activate-contact', 'Activate Contact Form', 'activate_contact_callback', 'clac_contact_section', 'contact-section');
     }
 
     function sidebar_options() {
@@ -50,7 +63,18 @@
         require_once(get_template_directory() . '/inc/templates/admin-settings.php');
     }
 
-    function theme_create_subpage() {
-        echo '<h1>Subpage</h1>';
+    // Activate contact form
+    function create_contact_form_page() {
+        require_once(get_template_directory() . '/inc/templates/admin-contact-form.php');
+    }
+
+    function contact_options() {
+        echo 'Activate and deactivate the built-in contact form.';
+    }
+
+    function activate_contact_callback() {
+        $options = get_option('activate_contact');
+        $checked = ( @$options == 1 ? 'checked' : '' );
+        echo '<label><input type="checkbox" id="activate_contact" name="activate_contact" value="1" '.$checked.'></label>';
     }
 ?>
