@@ -159,8 +159,8 @@
               <?php if (!empty($url)): ?>
                 <img class="mb-3 object-cover h-64 sm:h-32 lg:h-64 w-100" src="<?php echo $url ?>">
               <?php else: ?>
-                <div class="mb-3 h-64 sm:h-32 lg:h-64 bg-gray-200">
-                  <!-- -->
+                <div class="mb-3 h-64 sm:h-32 lg:h-64 bg-gray-100 flex items-center">
+                  <img class="object-cover" src="<?php echo get_template_directory_uri() . '/img/imagen-predeterminada-para-posts.png' ?>" alt="">
                 </div>
               <?php endif; ?>
               <div class="flex flex-col flex-1">
@@ -215,8 +215,8 @@
               <?php if (!empty($url)): ?>
                 <img class="mb-3 object-cover h-64 sm:h-32 lg:h-64 w-100" src="<?php echo $url ?>">
               <?php else: ?>
-                <div class="mb-3 h-64 sm:h-32 lg:h-64 bg-gray-200">
-                  <!-- -->
+                <div class="mb-3 h-64 sm:h-32 lg:h-64 bg-gray-100 flex items-center">
+                  <img class="object-cover" src="<?php echo get_template_directory_uri() . '/img/imagen-predeterminada-para-posts.png' ?>" alt="">
                 </div>
               <?php endif; ?>
               <div class="flex flex-col flex-1">
