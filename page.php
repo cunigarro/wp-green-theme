@@ -16,9 +16,11 @@
                         <h1 class="font-bold text-4xl lg:text-7xl leading-none mb-0 sm:mb-3">
                           <?php the_title(); ?>
                         </h1>
-                        <p class="font-light text-sm md:text-lg hidden sm:block">
-                          Latinoamérica y El Caribe
-                        </p>
+                        <?php if (has_excerpt()): ?>
+                          <p class="font-light text-sm md:text-lg hidden sm:block">
+                            <?php the_excerpt(); ?>
+                          </p>
+                        <?php endif; ?>
                       </div>
                     </div>
                   </div>
