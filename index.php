@@ -85,18 +85,20 @@
     </div>
   </div>
 
-  <div class="container mx-auto text-sm py-10 text-gray-600 px-4">
-    <p class="mb-3">
-      Desde América Latina y el Caribe, las dos redes continentales de productores de comercio justo: CLAC y WTFO-LA, lanzan la campaña "Ciudades y Pueblos Latinoamericanos por el Comercio Justo" en el año 2015.
-    </p>
+  <div class="container mx-auto text-sm py-10 text-gray-600 px-4 flex justify-center">
+    <div class="w-full md:w-10/12">
+      <p class="mb-3">
+        Desde América Latina y el Caribe, las dos redes continentales de productores de comercio justo: CLAC y WTFO-LA, lanzan la campaña "Ciudades y Pueblos Latinoamericanos por el Comercio Justo" en el año 2015.
+      </p>
 
-    <p class="mb-8">
-      La campaña nace para llevar a cabo el necesario trabajo de incidencia y sensibilización, tanto con las instituciones públicas como con las organizaciones de la sociedad civil, para apoyar desde las ciudades la filosofía, los principios y las prácticas del comercio justo y construir otra economía posible y necesaria. Al año siguiente, SSP, también se suma a la campaña, como otra red continental de pequeños productores de comercio justo.
-    </p>
+      <p class="mb-8">
+        La campaña nace para llevar a cabo el necesario trabajo de incidencia y sensibilización, tanto con las instituciones públicas como con las organizaciones de la sociedad civil, para apoyar desde las ciudades la filosofía, los principios y las prácticas del comercio justo y construir otra economía posible y necesaria. Al año siguiente, SSP, también se suma a la campaña, como otra red continental de pequeños productores de comercio justo.
+      </p>
 
-    <a href="/about-us.html" class="inline-flex items-center justify-center px-5 py-2 border border-transparent text-sm font-medium rounded-sm text-white uppercase bg-green">
-      Conoce más
-    </a>
+      <a href="/about-us.html" class="inline-flex items-center justify-center px-5 py-2 border border-transparent text-sm font-medium rounded-sm text-white uppercase bg-green">
+        Conoce más
+      </a>
+    </div>
   </div>
 
   <div class="bg-gray-400 py-20 relative overflow-hidden z-0">

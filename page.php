@@ -30,8 +30,10 @@
           </div>
         </div>
 
-        <div class="container mx-auto text-sm py-10 text-gray-600 px-4 content">
-          <?php the_content(); ?>
+        <div class="container mx-auto text-sm py-10 text-gray-600 px-4 content flex justify-center">
+          <div class="w-full md:w-10/12">
+            <?php the_content(); ?>
+          </div>
         </div>
     <?php }
 ?>
