@@ -3,7 +3,7 @@
 <?php
     while(have_posts()) {
         the_post(); ?>
-        <div class="flex justify-center items-center mx-auto z-0">
+        <div class="flex justify-center items-center mx-auto z-0 overflow-hidden">
           <div class="w-full bg-gray-100">
             <div class="swiper-container w-100">
               <!-- Additional required wrapper -->
