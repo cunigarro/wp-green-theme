@@ -23,7 +23,7 @@
                     </div>
                   </div>
                   <?php $url = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID())); ?>
-                  <img src="<?php echo $url ?>">
+                  <img class="object-cover w-full" src="<?php echo $url ?>">
                 </div>
               </div>
             </div>
