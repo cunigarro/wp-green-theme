@@ -1,3 +1,11 @@
+<div class="mb-10 bg-green p-3 flex items-center text-white rounded js-contact-alert hidden">
+    <div class="flex items-center flex-1">
+        <i class="mdi mdi-facebook mdi-24px mr-2"></i>
+        Tu mensaje se envío de manera exitosa
+    </div>
+    <i class="mdi mdi-close mdi-18px cursor-pointer js-close-contact-alert"></i>
+</div>
+
 <div class="grid grid-cols-12 gap-4">
     <div class="md:col-span-7 col-span-12">
         <form class="flex flex-col" id="contactForm" action="#" method="POST" data-url="<?php echo admin_url('admin-ajax.php'); ?>">
