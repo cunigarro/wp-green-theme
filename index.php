@@ -7,69 +7,75 @@
         <div class="swiper-wrapper">
           <!-- Slides -->
           <div class="swiper-slide relative">
-            <div class="text-container absolute left-0 top-0 h-full w-full px-12">
-              <div class="container flex items-center h-full w-full mx-auto text-white">
-                <div class="text-left">
-                  <h1 class="font-bold text-4xl lg:text-7xl leading-none mb-0 sm:mb-3">
-                    Somos
-                    <br>
-                    Comercio
-                    <br>
-                    Justo
-                  </h1>
-                  <p class="font-light text-sm md:text-lg hidden sm:block">
-                    Unidos por la equidad, la
-                    <br>
-                    sostenibilidad y el desarrollo de
-                    <br>
-                    nuestras ciudades y pueblos
-                  </p>
+            <div class="text-container absolute left-0 top-0 h-full w-full px-4">
+              <div class="container px-4 flex items-center h-full w-full mx-auto text-white flex justify-center">
+                <div class="w-full md:w-10/12">
+                  <div class="text-left">
+                    <h1 class="font-bold text-4xl lg:text-7xl leading-none mb-0 sm:mb-3">
+                      Somos
+                      <br>
+                      Comercio
+                      <br>
+                      Justo
+                    </h1>
+                    <p class="font-light text-sm md:text-lg hidden sm:block">
+                      Unidos por la equidad, la
+                      <br>
+                      sostenibilidad y el desarrollo de
+                      <br>
+                      nuestras ciudades y pueblos
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
             <img src="https://clac-statics.s3.amazonaws.com/foto-01-pagina-inicio.png">
           </div>
           <div class="swiper-slide relative">
-            <div class="text-container absolute left-0 top-0 h-full w-full px-12">
-              <div class="container flex items-center h-full w-full mx-auto text-white">
-                <div class="text-left">
-                  <h1 class="font-bold text-4xl lg:text-7xl leading-none mb-0 sm:mb-3">
-                    Somos
-                    <br>
-                    Comercio
-                    <br>
-                    Justo
-                  </h1>
-                  <p class="font-light text-sm md:text-lg hidden sm:block">
-                    Unidos por la equidad, la
-                    <br>
-                    sostenibilidad y el desarrollo de
-                    <br>
-                    nuestras ciudades y pueblos
-                  </p>
+            <div class="text-container absolute left-0 top-0 h-full w-full px-4">
+              <div class="container px-4 flex items-center h-full w-full mx-auto text-white flex justify-center">
+                <div class="w-full md:w-10/12">
+                  <div class="text-left">
+                    <h1 class="font-bold text-4xl lg:text-7xl leading-none mb-0 sm:mb-3">
+                      Somos
+                      <br>
+                      Comercio
+                      <br>
+                      Justo
+                    </h1>
+                    <p class="font-light text-sm md:text-lg hidden sm:block">
+                      Unidos por la equidad, la
+                      <br>
+                      sostenibilidad y el desarrollo de
+                      <br>
+                      nuestras ciudades y pueblos
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
             <img src="https://clac-statics.s3.amazonaws.com/foto-01-pagina-inicio.png">
           </div>
           <div class="swiper-slide relative">
-            <div class="text-container absolute left-0 top-0 h-full w-full px-12">
-              <div class="container flex items-center h-full w-full mx-auto text-white">
-                <div class="text-left">
-                  <h1 class="font-bold text-4xl lg:text-7xl leading-none mb-0 sm:mb-3">
-                    Somos
-                    <br>
-                    Comercio
-                    <br>
-                    Justo
-                  </h1>
-                  <p class="font-light text-sm md:text-lg hidden sm:block">
-                    Unidos por la equidad, la
-                    <br>
-                    sostenibilidad y el desarrollo de
-                    <br>
-                    nuestras ciudades y pueblos
-                  </p>
+            <div class="text-container absolute left-0 top-0 h-full w-full px-4">
+              <div class="container px-4 flex items-center h-full w-full mx-auto text-white flex justify-center">
+                <div class="w-full md:w-10/12">
+                  <div class="text-left">
+                    <h1 class="font-bold text-4xl lg:text-7xl leading-none mb-0 sm:mb-3">
+                      Somos
+                      <br>
+                      Comercio
+                      <br>
+                      Justo
+                    </h1>
+                    <p class="font-light text-sm md:text-lg hidden sm:block">
+                      Unidos por la equidad, la
+                      <br>
+                      sostenibilidad y el desarrollo de
+                      <br>
+                      nuestras ciudades y pueblos
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -88,11 +94,27 @@
   <div class="container mx-auto text-sm py-10 text-gray-600 px-4 flex justify-center">
     <div class="w-full md:w-10/12">
       <p class="mb-3">
-        Desde América Latina y el Caribe, las dos redes continentales de productores de comercio justo: CLAC y WTFO-LA, lanzan la campaña "Ciudades y Pueblos Latinoamericanos por el Comercio Justo" en el año 2015.
+        El Comercio Justo es un movimiento social global que aboga por un comercio en condiciones más equitativas y justas, a través de la creación de canales de comercialización más directos entre los productores(as) y los consumidores.
       </p>
 
-      <p class="mb-8">
-        La campaña nace para llevar a cabo el necesario trabajo de incidencia y sensibilización, tanto con las instituciones públicas como con las organizaciones de la sociedad civil, para apoyar desde las ciudades la filosofía, los principios y las prácticas del comercio justo y construir otra economía posible y necesaria. Al año siguiente, SSP, también se suma a la campaña, como otra red continental de pequeños productores de comercio justo.
+      <p class="mb-3">
+        Para promover este comercio alternativo, en 2015 se lanza la campaña “Ciudades y Pueblos por el Comercio Justo – Latinoamérica y el Caribe”, en la que participan  las dos redes continentales de productores y productoras de Comercio Justo: la Coordinadora Latinoamericana y del Caribe de Pequeños(as) Productores(as) y Trabajadores(as) de Comercio Justo (CLAC) y la Organización Mundial del Comercio Justo para América Latina (WFTO-LA). Juntas lanzan la campaña, a la que también se sumó el Símbolo de Pequeños Productores (SPP) al año siguiente.
+      </p>
+
+      <p class="mb-3">
+        Las ciudades y pueblos son, naturalmente, el espacio de interlocución ideal entre los ciudadanos y las autoridades. Cuando los ciudadanos, también en su rol de consumidores responsables, desarrollan una labor de incidencia activa, los resultados son visibles y transformadores.
+      </p>
+
+      <p class="mb-3">
+        La campaña busca potenciar el trabajo de incidencia y sensibilización, tanto con las instituciones públicas como con las organizaciones de la sociedad civil, para apoyar desde las ciudades la filosofía, los principios y las prácticas del comercio justo y construir otra economía posible y necesaria.
+      </p>
+
+      <p class="mb-3">
+        Actualmente, ocho ciudades de Latinoamérica y el Caribe forman parte activa de esta campaña. Esperamos que otras ciudades y pueblos puedan seguir sumándose a esta campaña en la región.
+      </p>
+
+      <p class="mb-3 italic">
+        “Ciudades y Pueblos por el Comercio Justo - Latinoamérica y el Caribe” forma parte de la campaña global de Fair Trade Towns International en la que participan 2,028 ciudades y pueblos en todo el mundo.
       </p>
 
       <a href="/about-us.html" class="inline-flex items-center justify-center px-5 py-2 border border-transparent text-sm font-medium rounded-sm text-white uppercase bg-green">

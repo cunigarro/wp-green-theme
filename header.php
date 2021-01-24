@@ -40,61 +40,8 @@
               'walker'            => new Walker_Nav_Main_Menu()
             ));
           ?>
-
-          <!-- <nav class="hidden xl:flex space-x-7 items-center ml-10">
-            <a href="#" class="text-sm text-center font-semibold text-gray-600 hover:text-blue">
-              <span class="hidden lg:inline">
-                Nuestras ciudades
-              </span>
-              <span class="inline lg:hidden">
-                Ciudades
-              </span>
-            </a>
-
-            <a href="#" class="text-sm text-center font-semibold text-gray-600 hover:text-blue">
-              <span class="hidden lg:inline">
-                Nuestras ciudades
-              </span>
-              <span class="inline lg:hidden">
-                Ciudades
-              </span>
-            </a>
-
-            <a href="#" class="text-sm text-center font-semibold text-gray-600 hover:text-blue">
-              <span class="hidden lg:inline">
-                Nuestras productos
-              </span>
-              <span class="inline lg:hidden">
-                Productos
-              </span>
-            </a>
-
-            <a href="#" class="text-sm text-center font-semibold text-gray-600 hover:text-blue">
-              <span class="hidden lg:inline">
-                Nuestras historias
-              </span>
-              <span class="inline lg:hidden">
-                Historias
-              </span>
-            </a>
-
-            <a href="#" class="text-sm text-center font-semibold text-gray-600 hover:text-blue">
-              Recursos
-            </a>
-          </nav> -->
         </div>
       </div>
-
-      <!--
-        Mobile menu, show/hide based on mobile menu state.
-
-        Entering: "duration-200 ease-out"
-          From: "opacity-0 scale-95"
-          To: "opacity-100 scale-100"
-        Leaving: "duration-100 ease-in"
-          From: "opacity-100 scale-100"
-          To: "opacity-0 scale-95"
-      -->
       <div class="fixed top-0 inset-x-0 p-2 transition transform origin-top-right hidden js-mb-menu z-30">
         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
           <div class="pt-5 pb-6 px-5">
@@ -121,38 +68,6 @@
                   'walker'            => new Walker_Nav_Main_Menu()
                 ));
               ?>
-
-              <!-- <nav class="grid gap-y-8">
-                <a href="/about-us.html" class="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">
-                  <span class="ml-3 text-sm font-semibold text-gray-600">
-                    ¿Quíenes somos?
-                  </span>
-                </a>
-
-                <a href="#" class="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">
-                  <span class="ml-3 text-sm font-semibold text-gray-600">
-                    Nuestras ciudades
-                  </span>
-                </a>
-
-                <a href="#" class="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">
-                  <span class="ml-3 text-sm font-semibold text-gray-600">
-                    Nuestros proyectos
-                  </span>
-                </a>
-
-                <a href="#" class="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">
-                  <span class="ml-3 text-sm font-semibold text-gray-600">
-                    Nuestras historias
-                  </span>
-                </a>
-
-                <a href="#" class="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">
-                  <span class="ml-3 text-sm font-semibold text-gray-600">
-                    Contáctenos
-                  </span>
-                </a>
-              </nav> -->
             </div>
           </div>
         </div>

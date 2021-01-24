@@ -7,7 +7,7 @@
 </div>
 
 <div class="grid grid-cols-12 gap-4">
-    <div class="md:col-span-7 col-span-12">
+    <div class="col-span-12 md:col-span-7">
         <form class="flex flex-col" id="contactForm" action="#" method="POST" data-url="<?php echo admin_url('admin-ajax.php'); ?>">
             <div class="mb-4">
                 <label class="block mb-2" for="">
@@ -40,10 +40,7 @@
             </div>
         </form>
     </div>
-    <div class="md:col-span-5 col-span-12 text-center">
-        <div class="mb-6 mt-11 md:mt-0">
-            <img class="w-5/12 inline-block" src="<?php echo get_template_directory_uri() . '/img/logo-vertical-comercio-justo-clac-web.png' ?>" alt="">
-        </div>
+    <div class="col-span-12 md:col-span-5">
         <p class="mb-4">
             Para informaciones e inquietudes sobre la campaña por favor escribir a ambos correos, o bien se puede poner en contacto a través del formulario.
         </p>
