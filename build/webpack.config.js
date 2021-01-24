@@ -29,7 +29,17 @@ module.exports = {
           ],
           fallback: 'style-loader'
         })
-      }
+      },
+      {
+        test: /\.(png|jp(e*)g|svg)$/,
+        use: [{
+          loader: 'file-loader',
+          options: {
+            name: '[name].[ext]',
+            outputPath: 'dist/img/'
+          }
+        }]
+      },
     ]
   },
   plugins: [
