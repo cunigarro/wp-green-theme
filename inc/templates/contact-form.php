@@ -1,7 +1,7 @@
 <div class="mb-10 bg-green p-3 flex items-center text-white rounded js-contact-alert hidden">
     <div class="flex items-center flex-1">
-        <i class="mdi mdi-facebook mdi-24px mr-2"></i>
-        Tu mensaje se envío de manera exitosa
+        <i class="mdi mdi-email-check mdi-24px mr-2"></i>
+        Tu mensaje ha sido enviado de manera exitosa.
     </div>
     <i class="mdi mdi-close mdi-18px cursor-pointer js-close-contact-alert"></i>
 </div>
@@ -55,15 +55,16 @@
                 Coordinadora de Incidencia
             </span>
             <br>
-            <a class="text-green text-blue:hover" href="mailto:linda.v@clac-comerciojusto.org">
+            <a class="text-green hover:underline" href="mailto:linda.v@clac-comerciojusto.org">
                 linda.v@clac-comerciojusto.org
             </a>
         </p>
-        <p class="mb-4">
-            <span>
+        <p class="mb-3">
+            <strong>
                 Contacto en WFTO-LA:
-            </span>
-            <br>
+            </strong>
+        </p>
+        <p class="mb-4">
             <span class="text-green mb-0">
                 <strong>
                     Zulma Brítez
@@ -74,13 +75,13 @@
                 Secretaria Regional
             </span>
             <br>
-            <a class="text-green" href="mailto:secretaria@wfto-la.org">
+            <a class="text-green hover:underline" href="mailto:secretaria@wfto-la.org">
                 secretaria@wfto-la.org
             </a>
         </p>
 
         <p>
-            También nos encuentras en <a class="text-green" href="https://www.facebook.com/ciudadescomerciojusto/" target="_blank">Facebook</a>
+            También nos encuentras en <a class="text-green hover:underline" href="https://www.facebook.com/ciudadescomerciojusto/" target="_blank">Facebook</a>
         </p>
     </div>
 </div>
