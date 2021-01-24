@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap">
     <link rel="icon" href="https://clac-statics.s3.amazonaws.com/favicon-comercio-justo-clac-web.png" type="image/png">
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <?php wp_head(); ?>
   </head>
   <body>
