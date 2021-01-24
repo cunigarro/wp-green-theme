@@ -93,33 +93,16 @@
 
   <div class="container mx-auto text-sm py-10 text-gray-600 px-4 flex justify-center">
     <div class="w-full md:w-10/12">
-      <p class="mb-3">
-        El Comercio Justo es un movimiento social global que aboga por un comercio en condiciones más equitativas y justas, a través de la creación de canales de comercialización más directos entre los productores(as) y los consumidores.
-      </p>
+      <?php
+        $post_7 = get_post(7);
+        echo apply_filters( 'the_content', $post_7->post_content );
+      ?>
 
-      <p class="mb-3">
-        Para promover este comercio alternativo, en 2015 se lanza la campaña “Ciudades y Pueblos por el Comercio Justo – Latinoamérica y el Caribe”, en la que participan  las dos redes continentales de productores y productoras de Comercio Justo: la Coordinadora Latinoamericana y del Caribe de Pequeños(as) Productores(as) y Trabajadores(as) de Comercio Justo (CLAC) y la Organización Mundial del Comercio Justo para América Latina (WFTO-LA). Juntas lanzan la campaña, a la que también se sumó el Símbolo de Pequeños Productores (SPP) al año siguiente.
-      </p>
-
-      <p class="mb-3">
-        Las ciudades y pueblos son, naturalmente, el espacio de interlocución ideal entre los ciudadanos y las autoridades. Cuando los ciudadanos, también en su rol de consumidores responsables, desarrollan una labor de incidencia activa, los resultados son visibles y transformadores.
-      </p>
-
-      <p class="mb-3">
-        La campaña busca potenciar el trabajo de incidencia y sensibilización, tanto con las instituciones públicas como con las organizaciones de la sociedad civil, para apoyar desde las ciudades la filosofía, los principios y las prácticas del comercio justo y construir otra economía posible y necesaria.
-      </p>
-
-      <p class="mb-3">
-        Actualmente, ocho ciudades de Latinoamérica y el Caribe forman parte activa de esta campaña. Esperamos que otras ciudades y pueblos puedan seguir sumándose a esta campaña en la región.
-      </p>
-
-      <p class="mb-3 italic">
-        “Ciudades y Pueblos por el Comercio Justo - Latinoamérica y el Caribe” forma parte de la campaña global de Fair Trade Towns International en la que participan 2,028 ciudades y pueblos en todo el mundo.
-      </p>
-
-      <a href="/about-us.html" class="inline-flex items-center justify-center px-5 py-2 border border-transparent text-sm font-medium rounded-sm text-white uppercase bg-green">
-        Conoce más
-      </a>
+      <div class="pt-3">
+        <a href="/about-us.html" class="inline-flex items-center justify-center px-5 py-2 border border-transparent text-sm font-medium rounded-sm text-white uppercase bg-green">
+          Conoce más
+        </a>
+      </div>
     </div>
   </div>
 
@@ -160,116 +143,124 @@
     </div>
   </div>
 
-  <div class="container mx-auto pt-8 px-4">
-    <h2 class="font-bold text-4xl mb-4">
-      Te puede interesar
-    </h2>
-  </div>
+  <?php
+    $currentInterestingPage = get_query_var('paged');
+    $pagitationInterestingPosts = new WP_Query(array(
+      'posts_per_page' => 3,
+      'paged' => $currentInterestingPage,
+      'category_name' => 'te-puede-interesar'
+    ));
 
-  <div class="container mx-auto px-4">
-    <div class="grid grid-cols-1 sm:grid-cols-3 gap-5">
-      <?php
-        $currentInterestingPage = get_query_var('paged');
-        $pagitationInterestingPosts = new WP_Query(array(
-          'posts_per_page' => 3,
-          'paged' => $currentInterestingPage,
-          'category_name' => 'te-puede-interesar'
-        ));
+    if ($pagitationInterestingPosts->have_posts()):
+  ?>
+    <div class="container mx-auto pt-8 px-4">
+      <h2 class="font-bold text-4xl mb-4">
+        Te puede interesar
+      </h2>
+    </div>
 
-        while($pagitationInterestingPosts->have_posts()) {
-            $pagitationInterestingPosts->the_post(); ?>
-            <div class="text-left flex flex-col">
-              <?php $url = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID())); ?>
-              <?php if (!empty($url)): ?>
-                <img class="mb-3 object-cover h-64 sm:h-32 lg:h-64 w-100" src="<?php echo $url ?>">
-              <?php else: ?>
-                <div class="mb-3 h-64 sm:h-32 lg:h-64 bg-gray-100 flex items-center">
-                  <img class="object-cover" src="<?php echo get_template_directory_uri() . '/img/imagen-predeterminada-para-posts.png' ?>" alt="">
-                </div>
-              <?php endif; ?>
-              <div class="flex flex-col flex-1">
-                <h3 class="font-bold flex-none sm:flex-1 lg:flex-none">
-                  <?php the_title(); ?>
-                </h3>
-                <div class="block sm:hidden lg:block flex-1 mt-3">
-                  <?php the_excerpt(); ?>
-                </div>
-                <div class="text-right mt-4">
-                  <a class="text-sm text-blue hover:underline font-semibold" href="<?php the_permalink(); ?>">
-                    Ir a artículo
-                  </a>
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-5">
+        <?php
+          while($pagitationInterestingPosts->have_posts()) {
+              $pagitationInterestingPosts->the_post(); ?>
+              <div class="text-left flex flex-col">
+                <?php $url = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID())); ?>
+                <?php if (!empty($url)): ?>
+                  <img class="mb-3 object-cover h-64 sm:h-32 lg:h-64 w-100" src="<?php echo $url ?>">
+                <?php else: ?>
+                  <div class="mb-3 h-64 sm:h-32 lg:h-64 bg-gray-100 flex items-center">
+                    <img class="object-cover" src="<?php echo get_template_directory_uri() . '/dist/img/imagen-predeterminada-para-posts.png' ?>" alt="">
+                  </div>
+                <?php endif; ?>
+                <div class="flex flex-col flex-1">
+                  <h3 class="font-bold flex-none sm:flex-1 lg:flex-none">
+                    <?php the_title(); ?>
+                  </h3>
+                  <div class="block sm:hidden lg:block flex-1 mt-3">
+                    <?php the_excerpt(); ?>
+                  </div>
+                  <div class="text-right mt-4">
+                    <a class="text-sm text-blue hover:underline font-semibold" href="<?php the_permalink(); ?>">
+                      Ir a artículo
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div>
-        <?php }
-      ?>
+          <?php }
+        ?>
+      </div>
+
+      <div class="flex py-5 justify-center">
+        <?php
+          echo paginate_links(array(
+            'total' => $pagitationInterestingPosts->max_num_pages,
+            'prev_text' => __('<i class="mdi mdi-chevron-left mdi-36px text-green"></i>'),
+            'next_text' => __('<i class="mdi mdi-chevron-right mdi-36px text-green"></i>')
+          ));
+        ?>
+      </div>
+    </div>
+  <?php endif; ?>
+
+  <?php
+    $currentNewsPage = get_query_var('paged');
+    $pagitationNewsPosts = new WP_Query(array(
+      'posts_per_page' => 3,
+      'paged' => $currentNewsPage,
+      'category_name' => 'noticias'
+    ));
+
+    if ($pagitationNewsPosts->have_posts()):
+  ?>
+    <div class="container mx-auto pt-8 px-4">
+      <h2 class="font-bold text-4xl mb-4">
+        Noticias
+      </h2>
     </div>
 
-    <div class="flex py-5 justify-center">
-      <?php
-        echo paginate_links(array(
-          'total' => $pagitationInterestingPosts->max_num_pages,
-          'prev_text' => __('<i class="mdi mdi-chevron-left mdi-36px text-green"></i>'),
-          'next_text' => __('<i class="mdi mdi-chevron-right mdi-36px text-green"></i>')
-        ));
-      ?>
-    </div>
-  </div>
-
-  <div class="container mx-auto pt-8 px-4">
-    <h2 class="font-bold text-4xl mb-4">
-      Noticias
-    </h2>
-  </div>
-
-  <div class="container mx-auto px-4">
-    <div class="grid grid-cols-1 sm:grid-cols-3 gap-5">
-      <?php
-        $currentNewsPage = get_query_var('paged');
-        $pagitationNewsPosts = new WP_Query(array(
-          'posts_per_page' => 3,
-          'paged' => $currentNewsPage,
-          'category_name' => 'noticias'
-        ));
-
-        while($pagitationNewsPosts->have_posts()) {
-            $pagitationNewsPosts->the_post(); ?>
-            <div class="text-left flex flex-col">
-              <?php $url = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID())); ?>
-              <?php if (!empty($url)): ?>
-                <img class="mb-3 object-cover h-64 sm:h-32 lg:h-64 w-100" src="<?php echo $url ?>">
-              <?php else: ?>
-                <div class="mb-3 h-64 sm:h-32 lg:h-64 bg-gray-100 flex items-center">
-                  <img class="object-cover" src="<?php echo get_template_directory_uri() . '/img/imagen-predeterminada-para-posts.png' ?>" alt="">
-                </div>
-              <?php endif; ?>
-              <div class="flex flex-col flex-1">
-                <h3 class="font-bold flex-none sm:flex-1 lg:flex-none">
-                  <?php the_title(); ?>
-                </h3>
-                <div class="block sm:hidden lg:block flex-1 mt-3">
-                  <?php the_excerpt(); ?>
-                </div>
-                <div class="text-right mt-4">
-                  <a class="text-sm text-blue hover:underline font-semibold" href="<?php the_permalink(); ?>">
-                    Ir a artículo
-                  </a>
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-5">
+        <?php
+          while($pagitationNewsPosts->have_posts()) {
+              $pagitationNewsPosts->the_post(); ?>
+              <div class="text-left flex flex-col">
+                <?php $url = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID())); ?>
+                <?php if (!empty($url)): ?>
+                  <img class="mb-3 object-cover h-64 sm:h-32 lg:h-64 w-100" src="<?php echo $url ?>">
+                <?php else: ?>
+                  <div class="mb-3 h-64 sm:h-32 lg:h-64 bg-gray-100 flex items-center">
+                    <img class="object-cover" src="<?php echo get_template_directory_uri() . '/dist/img/imagen-predeterminada-para-posts.png' ?>" alt="">
+                  </div>
+                <?php endif; ?>
+                <div class="flex flex-col flex-1">
+                  <h3 class="font-bold flex-none sm:flex-1 lg:flex-none">
+                    <?php the_title(); ?>
+                  </h3>
+                  <div class="block sm:hidden lg:block flex-1 mt-3">
+                    <?php the_excerpt(); ?>
+                  </div>
+                  <div class="text-right mt-4">
+                    <a class="text-sm text-blue hover:underline font-semibold" href="<?php the_permalink(); ?>">
+                      Ir a artículo
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div>
-        <?php }
-      ?>
-    </div>
+          <?php }
+        ?>
+      </div>
 
-    <div class="flex py-5 justify-center">
-      <?php
-        echo paginate_links(array(
-          'total' => $pagitationNewsPosts->max_num_pages,
-          'prev_text' => __('<i class="mdi mdi-chevron-left mdi-36px text-green"></i>'),
-          'next_text' => __('<i class="mdi mdi-chevron-right mdi-36px text-green"></i>')
-        ));
-      ?>
+      <div class="flex py-5 justify-center">
+        <?php
+          echo paginate_links(array(
+            'total' => $pagitationNewsPosts->max_num_pages,
+            'prev_text' => __('<i class="mdi mdi-chevron-left mdi-36px text-green"></i>'),
+            'next_text' => __('<i class="mdi mdi-chevron-right mdi-36px text-green"></i>')
+          ));
+        ?>
+      </div>
     </div>
-  </div>
+  <?php endif; ?>
 
 <?php get_footer(); ?>

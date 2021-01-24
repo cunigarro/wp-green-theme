@@ -141,6 +141,10 @@
 }
 
 .read-link {
-  margin-bottom: 25px;
+  @apply mb-4;
   display: inline-block;
+}
+
+p {
+  @apply mb-4;
 }
