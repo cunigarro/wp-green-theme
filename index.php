@@ -182,7 +182,7 @@
                   </div>
                   <div class="text-right mt-4">
                     <a class="text-sm text-blue hover:underline font-semibold" href="<?php the_permalink(); ?>">
-                      Ir a artículo
+                      Ir al artículo
                     </a>
                   </div>
                 </div>
@@ -242,7 +242,7 @@
                   </div>
                   <div class="text-right mt-4">
                     <a class="text-sm text-blue hover:underline font-semibold" href="<?php the_permalink(); ?>">
-                      Ir a artículo
+                      Ir al artículo
                     </a>
                   </div>
                 </div>
