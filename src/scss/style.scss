@@ -148,3 +148,23 @@
 p {
   @apply mb-4;
 }
+
+a {
+  @apply text-green;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.wp-block-quote {
+  border-left: 3px solid gray;
+  padding: 1rem 0 .1rem 1.2rem;
+  font-size: 1.1rem;
+  line-height: 1.6rem;
+  margin: 1rem 0;
+}
+
+.wpgmza_map {
+  @apply mb-4;
+}

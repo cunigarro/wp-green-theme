@@ -99,7 +99,7 @@
       ?>
 
       <div class="pt-3">
-        <a href="/about-us.html" class="inline-flex items-center justify-center px-5 py-2 border border-transparent text-sm font-medium rounded-sm text-white uppercase bg-green">
+        <a href="/quienes-somos" class="inline-flex items-center justify-center px-5 py-2 border border-transparent text-sm font-medium rounded-sm text-white uppercase bg-green">
           Conoce más
         </a>
       </div>

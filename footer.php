@@ -1,8 +1,8 @@
     <footer class="bg-green py-12">
       <div class="container mx-auto text-sm text-white flex items-center px-4">
         <span class="flex-1">
-          <a class="font-semibold text-base mr-4 hover:underline" href="#">Suscríbete</a>
-          <a class="font-semibold text-base hover:underline" href="/contactanos">Contáctanos</a>
+          <a class="font-semibold text-base mr-4 hover:underline text-white" href="#">Suscríbete</a>
+          <a class="font-semibold text-base hover:underline text-white" href="/contactanos">Contáctanos</a>
         </span>
         <div class="flex">
           <?php if (esc_attr(get_option('facebook'))): ?>
