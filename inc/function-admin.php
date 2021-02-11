@@ -41,8 +41,14 @@
 
         // Home slider
         register_setting('home-slider-group', 'home_slider_image_1');
+        register_setting('home-slider-group', 'home_slider_title_1');
+        register_setting('home-slider-group', 'home_slider_excerpt_1');
         register_setting('home-slider-group', 'home_slider_image_2');
+        register_setting('home-slider-group', 'home_slider_title_2');
+        register_setting('home-slider-group', 'home_slider_excerpt_2');
         register_setting('home-slider-group', 'home_slider_image_3');
+        register_setting('home-slider-group', 'home_slider_title_3');
+        register_setting('home-slider-group', 'home_slider_excerpt_3');
 
         add_settings_section('home-slider-section', 'Home Slider', 'home_slider_options', 'clac_home_slider');
 
@@ -105,28 +111,55 @@
 
     function home_slider_image_1_callback() {
         $image = get_option('home_slider_image_1');
+        $title = get_option('home_slider_title_1');
+        $excerpt = get_option('home_slider_excerpt_1');
+
         echo '<div style="display: flex; align-items:center;">';
+
         echo '<input type="button" value="Upload Image" id="home_slider_image_btn"><input type="hidden" id="home_slider_image" name="home_slider_image_1" value="'.$image.'">';
 
-        echo '<img id="home_slider_image_img" style="width: auto; height: 47px; margin-left: 20px; border: thin solid black; padding: 3px; border-radius: 3px;" src="'.$image.'">';
+        echo '<img id="home_slider_image_img" style="width: auto; height: 47px; margin-left: 20px; border: thin solid black; padding: 3px; border-radius: 3px; margin-right: 20px;" src="'.$image.'">';
+
+        echo '<input id="home_slider_title" style="margin-right: 20px;" type="text" name="home_slider_title_1" value="'.$title.'" placeholder="Title" />';
+
+        echo '<textarea id="home_slider_excerpt" style="resize: none;" type="text" name="home_slider_excerpt_1" placeholder="Excerpt" rows="4" cols="50">'.$excerpt.'</textarea>';
+
         echo '</div>';
     }
 
     function home_slider_image_2_callback() {
         $image = get_option('home_slider_image_2');
+        $title = get_option('home_slider_title_2');
+        $excerpt = get_option('home_slider_excerpt_2');
+
         echo '<div style="display: flex; align-items:center;">';
+
         echo '<input type="button" value="Upload Image" id="home_slider_image_btn"><input type="hidden" id="home_slider_image" name="home_slider_image_2" value="'.$image.'">';
 
-        echo '<img id="home_slider_image_img" style="width: auto; height: 47px; margin-left: 20px; border: thin solid black; padding: 3px; border-radius: 3px;" src="'.$image.'">';
+        echo '<img id="home_slider_image_img" style="width: auto; height: 47px; margin-left: 20px; border: thin solid black; padding: 3px; border-radius: 3px; margin-right: 20px;" src="'.$image.'">';
+
+        echo '<input id="home_slider_title" style="margin-right: 20px;" type="text" name="home_slider_title_2" value="'.$title.'" placeholder="Title" />';
+
+        echo '<textarea id="home_slider_excerpt" style="resize: none;" type="text" name="home_slider_excerpt_2" placeholder="Excerpt" rows="4" cols="50">'.$excerpt.'</textarea>';
+
         echo '</div>';
     }
 
     function home_slider_image_3_callback() {
         $image = get_option('home_slider_image_3');
+        $title = get_option('home_slider_title_3');
+        $excerpt = get_option('home_slider_excerpt_3');
+
         echo '<div style="display: flex; align-items:center;">';
+
         echo '<input type="button" value="Upload Image" id="home_slider_image_btn"><input type="hidden" id="home_slider_image" name="home_slider_image_3" value="'.$image.'">';
 
-        echo '<img id="home_slider_image_img" style="width: auto; height: 47px; margin-left: 20px; border: thin solid black; padding: 3px; border-radius: 3px;" src="'.$image.'">';
+        echo '<img id="home_slider_image_img" style="width: auto; height: 47px; margin-left: 20px; border: thin solid black; padding: 3px; border-radius: 3px; margin-right: 20px;" src="'.$image.'">';
+
+        echo '<input id="home_slider_title" style="margin-right: 20px;" type="text" name="home_slider_title_3" value="'.$title.'" placeholder="Title" />';
+
+        echo '<textarea id="home_slider_excerpt" style="resize: none;" type="text" name="home_slider_excerpt_3" placeholder="Excerpt" rows="4" cols="50">'.$excerpt.'</textarea>';
+
         echo '</div>';
     }
 ?>
