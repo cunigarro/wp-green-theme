@@ -1,3 +1,8 @@
+// CSS
+import '../scss/style.scss';
+import '../scss/admin-home-slider.scss';
+
+// Images
 import '../img/imagen-predeterminada-para-posts.png';
 import '../img/logo-vertical-comercio-justo-clac-web.png';
 import '../img/icono-clac-admin.png';

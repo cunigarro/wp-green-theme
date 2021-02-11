@@ -6,8 +6,7 @@ const tailwindcss = require('tailwindcss');
 module.exports = {
   entry: {
     'main': './src/js/main.js',
-    'admin-home-slider': './src/js/admin-home-slider.js',
-    'style': './src/scss/style.scss'
+    'admin-home-slider': './src/js/admin-home-slider.js'
   },
   output: {
     filename: './dist/js/[name].min.js'
@@ -48,7 +47,7 @@ module.exports = {
   },
   plugins: [
     new ExtractTextPlugin({
-      filename: './dist/css/style.css',
+      filename: './dist/css/[name].css',
       allChunks: true
     })
   ]
