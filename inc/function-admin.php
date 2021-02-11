@@ -44,7 +44,7 @@
 
         add_settings_section('home-slider-section', 'Home Slider', 'home_slider_options', 'clac_home_slider');
 
-        add_settings_field('home-slider-image-1', 'Image No. 1', 'home_slider_image_1_callback', 'clac_home_slider', 'home-slider-section');
+        add_settings_field('home-slider-image-1', '<p>Image No. 1</p>', 'home_slider_image_1_callback', 'clac_home_slider', 'home-slider-section');
     }
 
     function sidebar_options() {
@@ -101,6 +101,12 @@
 
     function home_slider_image_1_callback() {
         $image = get_option('home_slider_image_1');
-        echo '<input type="button" value="Upload Image" id="home_slider_image_1_btn"><input type="hidden"name="home_slider_image_1" value="'.$image.'">';
+        echo '<div style="display: flex; align-items:center;">';
+        echo '<input type="button" value="Upload Image" id="home_slider_image_1_btn"><input type="hidden" id="home_slider_image_1" name="home_slider_image_1" value="'.$image.'">';
+
+        if ($image) {
+            echo '<img id="home_slider_image_1_img" style="width: auto; height: 47px; margin-left: 20px; border: thin solid black; padding: 3px; border-radius: 3px;" src="'.$image.'">';
+        }
+        echo '</div>';
     }
 ?>

@@ -29,7 +29,7 @@
                 </div>
               </div>
             </div>
-            <img src="https://clac-statics.s3.amazonaws.com/foto-01-pagina-inicio.png">
+            <img src="<?php echo get_option('home_slider_image_1') ?>">
           </div>
           <div class="swiper-slide relative">
             <div class="text-container absolute left-0 top-0 h-full w-full px-4">
