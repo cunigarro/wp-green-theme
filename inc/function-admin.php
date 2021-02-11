@@ -1,9 +1,10 @@
 <?php
     function add_admin_page() {
-        add_menu_page('CLAC Settings', 'CLAC Settings', 'manage_options', 'clac', 'theme_create_page');
-
         // CLAC Settings
-        add_submenu_page('clac', 'CLAC Settings', 'CLAC Settings', 'manage_options', 'clac', 'theme_create_page');
+        add_menu_page('CLAC Settings', 'CLAC Settings', 'manage_options', 'clac', 'theme_create_page', get_template_directory_uri() . '/dist/img/icono-clac-admin.png');
+
+        // Social networks
+        add_submenu_page('clac', 'Social Networks', 'Social Networks', 'manage_options', 'clac', 'theme_create_page');
 
         // Contact form options
         add_submenu_page('clac', 'Contact Form', 'Contact Form', 'manage_options', 'clac_contact_section', 'create_contact_form_page');

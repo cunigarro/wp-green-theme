@@ -1,5 +1,5 @@
 <h1>
-    CLAC Web Configurations
+    CLAC Social Networks
 </h1>
 <?php settings_errors(); ?>
 <form method="post" action="options.php">

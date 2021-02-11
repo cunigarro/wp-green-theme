@@ -1,5 +1,6 @@
 import '../img/imagen-predeterminada-para-posts.png';
 import '../img/logo-vertical-comercio-justo-clac-web.png';
+import '../img/icono-clac-admin.png';
 
 const btnMenu = document.querySelector('.js-btn-menu');
 const mbMenu = document.querySelector('.js-mb-menu');
