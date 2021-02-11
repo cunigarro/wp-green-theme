@@ -41,10 +41,14 @@
 
         // Home slider
         register_setting('home-slider-group', 'home_slider_image_1');
+        register_setting('home-slider-group', 'home_slider_image_2');
+        register_setting('home-slider-group', 'home_slider_image_3');
 
         add_settings_section('home-slider-section', 'Home Slider', 'home_slider_options', 'clac_home_slider');
 
         add_settings_field('home-slider-image-1', '<p>Image No. 1</p>', 'home_slider_image_1_callback', 'clac_home_slider', 'home-slider-section');
+        add_settings_field('home-slider-image-2', '<p>Image No. 2</p>', 'home_slider_image_2_callback', 'clac_home_slider', 'home-slider-section');
+        add_settings_field('home-slider-image-3', '<p>Image No. 3</p>', 'home_slider_image_3_callback', 'clac_home_slider', 'home-slider-section');
     }
 
     function sidebar_options() {
@@ -102,11 +106,27 @@
     function home_slider_image_1_callback() {
         $image = get_option('home_slider_image_1');
         echo '<div style="display: flex; align-items:center;">';
-        echo '<input type="button" value="Upload Image" id="home_slider_image_1_btn"><input type="hidden" id="home_slider_image_1" name="home_slider_image_1" value="'.$image.'">';
+        echo '<input type="button" value="Upload Image" id="home_slider_image_btn"><input type="hidden" id="home_slider_image" name="home_slider_image_1" value="'.$image.'">';
 
-        if ($image) {
-            echo '<img id="home_slider_image_1_img" style="width: auto; height: 47px; margin-left: 20px; border: thin solid black; padding: 3px; border-radius: 3px;" src="'.$image.'">';
-        }
+        echo '<img id="home_slider_image_img" style="width: auto; height: 47px; margin-left: 20px; border: thin solid black; padding: 3px; border-radius: 3px;" src="'.$image.'">';
+        echo '</div>';
+    }
+
+    function home_slider_image_2_callback() {
+        $image = get_option('home_slider_image_2');
+        echo '<div style="display: flex; align-items:center;">';
+        echo '<input type="button" value="Upload Image" id="home_slider_image_btn"><input type="hidden" id="home_slider_image" name="home_slider_image_2" value="'.$image.'">';
+
+        echo '<img id="home_slider_image_img" style="width: auto; height: 47px; margin-left: 20px; border: thin solid black; padding: 3px; border-radius: 3px;" src="'.$image.'">';
+        echo '</div>';
+    }
+
+    function home_slider_image_3_callback() {
+        $image = get_option('home_slider_image_3');
+        echo '<div style="display: flex; align-items:center;">';
+        echo '<input type="button" value="Upload Image" id="home_slider_image_btn"><input type="hidden" id="home_slider_image" name="home_slider_image_3" value="'.$image.'">';
+
+        echo '<img id="home_slider_image_img" style="width: auto; height: 47px; margin-left: 20px; border: thin solid black; padding: 3px; border-radius: 3px;" src="'.$image.'">';
         echo '</div>';
     }
 ?>
