@@ -9,6 +9,9 @@
         // Contact form options
         add_submenu_page('clac', 'Contact Form', 'Contact Form', 'manage_options', 'clac_contact_section', 'create_contact_form_page');
 
+        // Home slider options
+        add_submenu_page('clac', 'Home Slider', 'Home Slider', 'manage_options', 'clac_home_slider', 'create_home_slider');
+
         // Activate custom settings
         add_action('admin_init', 'custom_settings');
     }
@@ -16,6 +19,7 @@
     add_action('admin_menu', 'add_admin_page');
 
     function custom_settings() {
+        // Social networks
         register_setting('settings-group', 'facebook');
         register_setting('settings-group', 'instagram');
         register_setting('settings-group', 'youtube');
@@ -34,6 +38,13 @@
         add_settings_section('contact-section', 'Contact Form', 'contact_options', 'clac_contact_section');
 
         add_settings_field('activate-contact', 'Activate Contact Form', 'activate_contact_callback', 'clac_contact_section', 'contact-section');
+
+        // Home slider
+        register_setting('home-slider-group', 'home_slider_image_1');
+
+        add_settings_section('home-slider-section', 'Home Slider', 'home_slider_options', 'clac_home_slider');
+
+        add_settings_field('home-slider-image-1', 'Image No. 1', 'home_slider_image_1_callback', 'clac_home_slider', 'home-slider-section');
     }
 
     function sidebar_options() {
@@ -69,13 +80,27 @@
         require_once(get_template_directory() . '/inc/templates/admin-contact-form.php');
     }
 
+    // Slider
+    function create_home_slider() {
+        require_once(get_template_directory() . '/inc/templates/admin-home-slider.php');
+    }
+
     function contact_options() {
         echo 'Activate and deactivate the built-in contact form.';
+    }
+
+    function home_slider_options() {
+        echo 'Chose images for home slider.';
     }
 
     function activate_contact_callback() {
         $options = get_option('activate_contact');
         $checked = ( @$options == 1 ? 'checked' : '' );
         echo '<label><input type="checkbox" id="activate_contact" name="activate_contact" value="1" '.$checked.'></label>';
+    }
+
+    function home_slider_image_1_callback() {
+        $image = get_option('home_slider_image_1');
+        echo '<input type="button" value="Upload Image" id="home_slider_image_1_btn"><input type="hidden"name="home_slider_image_1" value="'.$image.'">';
     }
 ?>

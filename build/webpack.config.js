@@ -4,9 +4,13 @@ const autoprefixer = require('autoprefixer');
 const tailwindcss = require('tailwindcss');
 
 module.exports = {
-  entry: ['./src/js/main.js', './src/scss/style.scss'],
+  entry: {
+    'main': './src/js/main.js',
+    'admin-home-slider': './src/js/admin-home-slider.js',
+    'style': './src/scss/style.scss'
+  },
   output: {
-    filename: './dist/js/main.min.js',
+    filename: './dist/js/[name].min.js'
   },
   module: {
     rules: [
