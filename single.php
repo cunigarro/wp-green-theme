@@ -20,7 +20,7 @@
 
         <div class="container mx-auto text-sm py-10 text-gray-600 px-4 content flex justify-center">
           <div class="w-full md:w-10/12">
-            <h1 class="font-bold text-4xl leading-none mb-7">
+            <h1 class="font-semibold text-4xl leading-none mb-7">
               <?php the_title(); ?>
             </h1>
             <?php the_content(); ?>
