@@ -70,7 +70,7 @@
   <div class="container mx-auto text-sm py-10 text-gray-600 px-4 flex justify-center">
     <div class="w-full md:w-10/12">
       <?php
-        $post_7 = get_post(7);
+        $post_7 = get_post(1925);
         echo apply_filters( 'the_content', $post_7->post_content );
       ?>
 
@@ -92,7 +92,7 @@
             Nuestra campaña
           </p>
           <p class="text-sm">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos facilis tenetur sed ad rerum, accusantium excepturi vitae aspernatur!
+            Desde América Latina y el Caribe, las dos redes continentales de productores de comercio justo: CLAC y WFTO-LA, lanzan la campaña “Ciudades y Pueblos Latinoamericanos por el Comercio Justo” en el año 2015.
           </p>
         </div>
 
@@ -102,7 +102,7 @@
             Criterios
           </p>
           <p class="text-sm">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos facilis tenetur sed ad rerum, accusantium excepturi vitae aspernatur!
+            Para el desarrollo de la campaña en América Latina y el Caribe consideramos que es indispensable la construcción conjunta de la estrategia local entre productores de comercio justo, organizaciones de la sociedad civil y autoridades locales.
           </p>
         </div>
 
@@ -112,7 +112,7 @@
             Guías de participación
           </p>
           <p class="text-sm">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos facilis tenetur sed ad rerum, accusantium excepturi vitae aspernatur!
+            Esta guía se consolidó conjuntamente entre CLAC y WFTO-LA a partir de los cinco criterios internacionales pero con adaptación a la realidad continental. Es solo una propuesta que se puede adaptar y mejorar a nivel local a través de la construcción conjunta.
           </p>
         </div>
       </div>
