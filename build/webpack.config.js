@@ -6,7 +6,8 @@ const tailwindcss = require('tailwindcss');
 module.exports = {
   entry: {
     'main': './src/js/main.js',
-    'admin-home-slider': './src/js/admin-home-slider.js'
+    'admin-home-slider': './src/js/admin-home-slider.js',
+    'style': './src/scss/style.scss'
   },
   output: {
     filename: './dist/js/[name].min.js'
