@@ -3,9 +3,10 @@
         <span class="flex-1 flex items-center mb-5 md:mb-0 flex-col md:flex-row">
           <a class="font-semibold text-base hover:underline text-white mb-5 md:mb-0 mr-0 md:mr-3" href="/contactanos">Contáctanos</a>
           <div class="flex-1 text-center">
-            <img class="h-14 lg:h-20 inline-block mx-3" src="<?php echo get_template_directory_uri() . '/dist/img/logo-wfto-latino-america.png' ?>" alt="">
+            <img class="h-14 lg:h-20 inline-block mx-3" src="<?php echo get_template_directory_uri() . '/dist/img/logo-clac.png' ?>" alt="">
+            <img class="h-14 lg:h-20 inline-block mx-3" src="<?php echo get_template_directory_uri() . '/dist/img/logo-fairtrade.png' ?>" alt="">
             <img class="h-14 lg:h-20 inline-block mx-3" src="<?php echo get_template_directory_uri() . '/dist/img/logo-spp.png' ?>" alt="">
-            <img class="h-14 lg:h-20 inline-block mx-3" src="<?php echo get_template_directory_uri() . '/dist/img/logo-clac-flo.png' ?>" alt="">
+            <img class="h-14 lg:h-20 inline-block mx-3" src="<?php echo get_template_directory_uri() . '/dist/img/logo-wfto-latino-america.png' ?>" alt="">
           </div>
         </span>
         <div class="flex">

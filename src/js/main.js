@@ -6,7 +6,8 @@ import '../scss/admin-home-slider.scss';
 import '../img/imagen-predeterminada-para-posts.png';
 import '../img/logo-vertical-comercio-justo-clac-web.png';
 import '../img/icono-clac-admin.png';
-import '../img/logo-clac-flo.png';
+import '../img/logo-clac.png';
+import '../img/logo-fairtrade.png';
 import '../img/logo-spp.png';
 import '../img/logo-wfto-latino-america.png';
 
