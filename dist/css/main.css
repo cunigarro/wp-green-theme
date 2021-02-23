@@ -558,16 +558,19 @@ video {
 h1 {
   font-size: 1.5rem;
   line-height: 2rem;
+  margin-bottom: 1rem;
 }
 
 h2 {
   font-size: 1.25rem;
   line-height: 1.75rem;
+  margin-bottom: .8rem;
 }
 
 h3 {
   font-size: 1.125rem;
   line-height: 1.75rem;
+  margin-bottom: .5rem;
 }
 
 .container {
@@ -27539,6 +27542,24 @@ a:hover {
 
 .wpgmza_map {
   margin-bottom: 1rem;
+}
+
+ul,
+ol {
+  padding-left: 1.2rem;
+}
+
+ul li,
+ol li {
+  margin-bottom: .5rem;
+}
+
+ul {
+  list-style: disc;
+}
+
+ol {
+  list-style: decimal;
 }
 
 @media (min-width: 540px) {

@@ -3,12 +3,15 @@
 @layer base {
   h1 {
     @apply text-2xl;
+    margin-bottom: 1rem;
   }
   h2 {
     @apply text-xl;
+    margin-bottom: .8rem;
   }
   h3 {
     @apply text-lg;
+    margin-bottom: .5rem;
   }
 }
 
@@ -180,4 +183,22 @@ a {
 
 .wpgmza_map {
   @apply mb-4;
+}
+
+ul,
+ol {
+  padding-left: 1.2rem;
+}
+
+ul li,
+ol li {
+  margin-bottom: .5rem;
+}
+
+ul {
+  list-style: disc;
+}
+
+ol {
+  list-style: decimal;
 }

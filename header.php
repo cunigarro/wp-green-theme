@@ -37,7 +37,7 @@
             wp_nav_menu(array(
               'menu'              => 'main-menu',
               'container'         => false,
-              'menu_class'        => 'hidden xl:flex space-x-7 items-center ml-10 text-center',
+              'menu_class'        => 'hidden xl:flex space-x-7 items-center ml-10 text-center list-none',
               'walker'            => new Walker_Nav_Main_Menu()
             ));
           ?>
