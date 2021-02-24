@@ -239,4 +239,10 @@
     </div>
   <?php endif; ?>
 
+  <div class="container mx-auto px-4 pt-3 pb-10">
+    <a href="/archivo-de-noticias" class="inline-flex items-center justify-center px-5 py-2 border border-transparent text-sm font-medium rounded-sm text-white uppercase bg-green">
+      Archivo de Noticias
+    </a>
+  </div>
+
 <?php get_footer(); ?>
