@@ -47,18 +47,14 @@
           <?php }
         ?>
       </div>
-        <?php
-            if($quantiyOfPosts > 9):
-        ?>
-            <div class="flex py-5 justify-center">
-                <?php
-                    echo paginate_links(array(
-                        'total' => $pagitationNewsPosts->max_num_pages,
-                        'prev_text' => __('<i class="mdi mdi-chevron-left mdi-36px text-green"></i>'),
-                        'next_text' => __('<i class="mdi mdi-chevron-right mdi-36px text-green"></i>')
-                    ));
-                ?>
-            </div>
-        <?php endif; ?>
+        <div class="flex py-5 justify-center">
+            <?php
+                echo paginate_links(array(
+                    'total' => $pagitationNewsPosts->max_num_pages,
+                    'prev_text' => __('<i class="mdi mdi-chevron-left mdi-36px text-green"></i>'),
+                    'next_text' => __('<i class="mdi mdi-chevron-right mdi-36px text-green"></i>')
+                ));
+            ?>
+        </div>
     </div>
 <?php endif; ?>
