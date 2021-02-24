@@ -9,13 +9,13 @@
 
     if ($pagitationNewsPosts->have_posts()):
   ?>
-    <div class="container mx-auto pt-4 px-4">
+    <div class="mx-auto pt-4">
       <h2 class="font-bold text-4xl mb-8">
         Archivo de Noticias
       </h2>
     </div>
 
-    <div class="container mx-auto px-4">
+    <div class="mx-auto">
       <div class="grid grid-cols-1 sm:grid-cols-3 gap-5">
         <?php
           while($pagitationNewsPosts->have_posts()) {
