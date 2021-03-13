@@ -1,12 +1,12 @@
-    <footer class="bg-green py-8">
+    <footer class="bg-green pt-8 pb-3">
       <div class="container mx-auto text-sm text-white flex items-center px-4 flex-col md:flex-row">
         <span class="flex-1 flex items-center mb-5 md:mb-0 flex-col md:flex-row">
           <a class="font-semibold text-base hover:underline text-white mb-5 md:mb-0 mr-0 md:mr-3" href="/contactanos">Contáctanos</a>
           <div class="flex-1 text-center">
             <img class="h-14 lg:h-20 inline-block mx-3" src="<?php echo get_template_directory_uri() . '/dist/img/logo-clac.png' ?>" alt="">
             <img class="h-14 lg:h-20 inline-block mx-3" src="<?php echo get_template_directory_uri() . '/dist/img/logo-fairtrade.png' ?>" alt="">
-            <img class="h-14 lg:h-20 inline-block mx-3" src="<?php echo get_template_directory_uri() . '/dist/img/logo-spp.png' ?>" alt="">
             <img class="h-14 lg:h-20 inline-block mx-3" src="<?php echo get_template_directory_uri() . '/dist/img/logo-wfto-latino-america.png' ?>" alt="">
+            <img class="h-14 lg:h-20 inline-block mx-3" src="<?php echo get_template_directory_uri() . '/dist/img/logo-union-europea.jpeg' ?>" alt="">
           </div>
         </span>
         <div class="flex">
@@ -42,6 +42,11 @@
             </a>
           <?php endif; ?>
         </div>
+      </div>
+      <div class="container mx-auto px-4 pt-6">
+        <p class="text-xs mb-0 text-white">
+          Esta página web fue creada con el apoyo financiero de la Unión Europea. Sus contenidos son responsabilidad exclusiva de CLAC y no necesariamente reflejan los puntos de vista de la Unión Europea
+        </p>
       </div>
     </footer>
 

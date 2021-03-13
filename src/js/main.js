@@ -10,6 +10,7 @@ import '../img/logo-clac.png';
 import '../img/logo-fairtrade.png';
 import '../img/logo-spp.png';
 import '../img/logo-wfto-latino-america.png';
+import '../img/logo-union-europea.jpeg';
 
 const btnMenu = document.querySelector('.js-btn-menu');
 const mbMenu = document.querySelector('.js-mb-menu');
