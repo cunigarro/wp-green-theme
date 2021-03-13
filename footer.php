@@ -1,7 +1,9 @@
     <footer class="bg-green pt-8 pb-3">
       <div class="container mx-auto text-sm text-white flex items-center px-4 flex-col md:flex-row">
         <span class="flex-1 flex items-center mb-5 md:mb-0 flex-col md:flex-row">
-          <a class="font-semibold text-base hover:underline text-white mb-5 md:mb-0 mr-0 md:mr-3" href="/contactanos">Contáctanos</a>
+          <?php if (get_option('activate_contact')): ?>
+            <a class="font-semibold text-base hover:underline text-white mb-5 md:mb-0 mr-0 md:mr-3" href="/contactanos">Contáctanos</a>
+          <?php endif; ?>
           <div class="flex-1 text-center">
             <img class="h-14 lg:h-20 inline-block mx-3" src="<?php echo get_template_directory_uri() . '/dist/img/logo-clac.png' ?>" alt="">
             <img class="h-14 lg:h-20 inline-block mx-3" src="<?php echo get_template_directory_uri() . '/dist/img/logo-fairtrade.png' ?>" alt="">
