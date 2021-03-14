@@ -12,6 +12,9 @@ import '../img/logo-spp.png';
 import '../img/logo-wfto-latino-america.png';
 import '../img/logo-union-europea.jpeg';
 
+// Js
+import './contact-form.js';
+
 const btnMenu = document.querySelector('.js-btn-menu');
 const mbMenu = document.querySelector('.js-mb-menu');
 const closeBtnMbMenu = document.querySelector('.js-close-mb-menu');
