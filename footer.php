@@ -4,11 +4,16 @@
           <?php if (get_option('activate_contact')): ?>
             <a class="font-semibold text-base hover:underline text-white mb-5 md:mb-0 mr-0 md:mr-3" href="/contactanos">Contáctanos</a>
           <?php endif; ?>
-          <div class="flex-1 text-center">
-            <img class="h-14 lg:h-20 inline-block mx-3" src="<?php echo get_template_directory_uri() . '/dist/img/logo-clac.png' ?>" alt="">
-            <img class="h-14 lg:h-20 inline-block mx-3" src="<?php echo get_template_directory_uri() . '/dist/img/logo-fairtrade.png' ?>" alt="">
-            <img class="h-14 lg:h-20 inline-block mx-3" src="<?php echo get_template_directory_uri() . '/dist/img/logo-wfto-latino-america.png' ?>" alt="">
-            <img class="h-14 lg:h-20 inline-block mx-3" src="<?php echo get_template_directory_uri() . '/dist/img/logo-union-europea.jpeg' ?>" alt="">
+          <div class="flex-1 text-center flex items-start justify-center">
+            <img class="h-14 lg:h-20 mx-3" src="<?php echo get_template_directory_uri() . '/dist/img/logo-clac.png' ?>" alt="">
+            <img class="h-14 lg:h-20 mx-3" src="<?php echo get_template_directory_uri() . '/dist/img/logo-fairtrade.png' ?>" alt="">
+            <img class="h-14 lg:h-20 mx-3" src="<?php echo get_template_directory_uri() . '/dist/img/logo-wfto-latino-america.png' ?>" alt="">
+            <div class="w-32 mx-3">
+              <img class="mb-1" src="<?php echo get_template_directory_uri() . '/dist/img/logo-union-europea.jpeg' ?>" alt="">
+              <p class="eu-text-size mb-0 text-white leading-3 text-center">
+                Esta página web fue creada con el apoyo financiero de la Unión Europea. Sus contenidos son responsabilidad exclusiva de CLAC y no necesariamente reflejan los puntos de vista de la Unión Europea
+              </p>
+            </div>
           </div>
         </span>
         <div class="flex">
@@ -45,11 +50,9 @@
           <?php endif; ?>
         </div>
       </div>
-      <div class="container mx-auto px-4 pt-6">
-        <p class="text-xs mb-0 text-white">
-          Esta página web fue creada con el apoyo financiero de la Unión Europea. Sus contenidos son responsabilidad exclusiva de CLAC y no necesariamente reflejan los puntos de vista de la Unión Europea
-        </p>
-      </div>
+      <!-- <div class="container mx-auto px-4 pt-6">
+
+      </div> -->
     </footer>
 
     <?php wp_footer(); ?>

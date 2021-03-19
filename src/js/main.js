@@ -1,6 +1,5 @@
 // CSS
 import '../scss/style.scss';
-import '../scss/admin-home-slider.scss';
 
 // Images
 import '../img/imagen-predeterminada-para-posts.png';

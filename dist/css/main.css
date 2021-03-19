@@ -27562,6 +27562,10 @@ ol {
   list-style: decimal;
 }
 
+.eu-text-size {
+  font-size: .3rem;
+}
+
 @media (min-width: 540px) {
   .sm\:container {
     width: 100%;
@@ -134408,7 +134412,4 @@ ol {
     -webkit-animation: bounce 1s infinite;
             animation: bounce 1s infinite;
   }
-}
-.hola {
-  color: red;
 }
