@@ -9,6 +9,15 @@
     add_theme_support('menus');
     add_post_type_support( 'page', 'excerpt' );
 
+    if ( current_user_can('contributor') && ! current_user_can( 'upload_files' ) ) {
+        add_action( 'admin_init', 'allow_contributor_upload_files' );
+    }
+
+    function allow_contributor_upload_files() {
+        $contributor = get_role('contributor');
+        $contributor->add_cap('upload_files');
+    }
+
     class Walker_Nav_Main_Menu extends Walker_Nav_Menu
     {
         public function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ){ //li a span
