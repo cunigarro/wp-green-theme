@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@5.8.55/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap">
-    <link rel="icon" href="https://clac-statics.s3.amazonaws.com/favicon-comercio-justo-clac-web.png" type="image/png">
+    <link rel="icon" href="<?php echo get_template_directory_uri() . '/dist/img/favicon-comercio-justo-clac-web.png' ?>" type="image/png">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <?php wp_head(); ?>
@@ -20,7 +20,7 @@
           <div class="flex justify-start lg:w-0 flex-1 flex-shrink">
             <a href="/">
               <span class="sr-only">CLAC</span>
-              <img class="h-16 sm:h-20" src="https://clac-statics.s3.amazonaws.com/logo-comercio-justo-clac-web.png" alt="">
+              <img class="h-16 sm:h-20" src="<?php echo get_template_directory_uri() . '/dist/img/logo-comercio-justo-clac-web.png' ?>" alt="">
             </a>
           </div>
           <div class="-mr-2 -my-2 xl:hidden">
@@ -48,7 +48,7 @@
           <div class="pt-5 pb-6 px-5">
             <div class="flex items-center justify-between">
               <a href="/" target="_parent">
-                <img class="h-10 w-auto" src="https://clac-statics.s3.amazonaws.com/icono-comercio-justo-clac-web.png" alt="Workflow">
+                <img class="h-10 w-auto" src="<?php echo get_template_directory_uri() . '/dist/img/icono-comercio-justo-clac-web.png' ?>" alt="Workflow">
               </a>
               <div class="-mr-2">
                 <button type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 js-close-mb-menu">

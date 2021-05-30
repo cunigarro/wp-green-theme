@@ -83,11 +83,11 @@
   </div>
 
   <div class="bg-gray-400 py-20 relative overflow-hidden z-0">
-    <img class="w-full h-full absolute left-0 top-0 z-0 object-top object-cover" src="https://clac-statics.s3.amazonaws.com/fondo-de-iconos.jpg" alt="">
+    <img class="w-full h-full absolute left-0 top-0 z-0 object-top object-cover" src="<?php echo get_template_directory_uri() . '/dist/img/fondo-de-iconos.jpg' ?>" alt="">
     <div class="container mx-auto px-4 z-10 relative">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div class="bg-white text-center border-t-8 border-green p-8 text-gray-600">
-          <img class="mb-6 inline-block w-36 h-auto" src="https://clac-statics.s3.amazonaws.com/icono-comercio-justo-01.png" alt="">
+          <img class="mb-6 inline-block w-36 h-auto" src="<?php echo get_template_directory_uri() . '/dist/img/icono-comercio-justo-01.png' ?>" alt="">
           <p class="font-semibold mb-4">
             Nuestra campaña
           </p>
@@ -97,7 +97,7 @@
         </div>
 
         <div class="bg-white text-center border-t-8 border-blue p-8 text-gray-600">
-          <img class="mb-6 inline-block w-36 h-auto" src="https://clac-statics.s3.amazonaws.com/icono-comercio-justo-02.png" alt="">
+          <img class="mb-6 inline-block w-36 h-auto" src="<?php echo get_template_directory_uri() . '/dist/img/icono-comercio-justo-02.png' ?>" alt="">
           <p class="font-semibold mb-4">
             Criterios
           </p>
@@ -107,7 +107,7 @@
         </div>
 
         <div class="bg-white text-center border-t-8 border-yellow p-8 text-gray-600">
-          <img class="mb-6 inline-block w-36 h-auto" src="https://clac-statics.s3.amazonaws.com/icono-comercio-justo-03.png" alt="">
+          <img class="mb-6 inline-block w-36 h-auto" src="<?php echo get_template_directory_uri() . '/dist/img/icono-comercio-justo-03.png' ?>" alt="">
           <p class="font-semibold mb-4">
             Guías de participación
           </p>

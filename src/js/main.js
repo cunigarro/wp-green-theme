@@ -10,6 +10,16 @@ import '../img/logo-fairtrade.png';
 import '../img/logo-spp.png';
 import '../img/logo-wfto-latino-america.png';
 import '../img/logo-union-europea.jpeg';
+import '../img/favicon-comercio-justo-clac-web.png';
+import '../img/fondo-de-iconos.jpg';
+import '../img/foto-01-pagina-inicio.png';
+import '../img/foto-01-pagina-quienes-somos.jpg';
+import '../img/foto-02-pagina-quienes-somos.jpg';
+import '../img/icono-comercio-justo-01.png';
+import '../img/icono-comercio-justo-02.png';
+import '../img/icono-comercio-justo-03.png';
+import '../img/icono-comercio-justo-clac-web.png';
+import '../img/logo-comercio-justo-clac-web.png';
 
 // Js
 import './contact-form.js';
